@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>О фильме</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="/js/main.js" defer></script>
+</head>
+<body>
+	<div class="container">
+		<header class="header">
+			<a href="index.html" class="logo-link">
+				<img width="71" height="71" src="img/logo.jpg" alt="logo" class="logo">
+			</a>
+			<nav class="nav">
+				<ul class="nav_menu">
+					<li class="nav_menu-item">
+						<a href="about.html" class="nav_menu-link">статьи</a>
+					</li>
+					<li class="nav_menu-item">
+						<a href="trailer.html" class="nav_menu-link">питание</a>
+					</li>
+					<li class="nav_menu-item">
+						<a href="actors.html" class="nav_menu-link">вид спорта</a>
+					</li>
+					<li class="nav_menu-item">
+						<a href="premier.html" class="nav_menu-link">о нас</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div class="content_main">
+			<div class="form">
+				<form id="formPM">
+					<p><b>Введите Ваш PM</b></p>
+					<p><b>Жим лежа:</b><br>
+					 <input type="number" id="benchpress" size="10" autocomplete="off">
+					</p>
+					<p><b>Присяд:</b><br>
+						<input type="number" id="squat" size="10" autocomplete="off">
+					</p>
+					<p><b>Армейский жим стоя:</b><br>
+						<input type="number" id="armybenchpress" size="10" autocomplete="off">
+					</p>
+					<p><b>Становая тяга:</b><br>
+						<input type="number" id="deadlift" size="10" autocomplete="off">
+					</p>
+					<p><input type="submit" id="submit-form" value="Расчитать">
+					 <input type="reset" id="reset-form" value="Очистить"></p>
+				   </form>
+			</div>
+			<div class="name_of_programm">Программа 5-3-1</div>
+			<div class="programm">
+				
+			</div>
+			<div class="button-group hide_btn">
+				<a href="/531.html" class="btn recalculation">Пересчитать</a>
+				<a href="/nowork.html" class="btn">Сохранить в PDF</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
