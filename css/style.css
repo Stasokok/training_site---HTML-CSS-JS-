@@ -32,6 +32,43 @@ body {
 	padding-right: 50px;
 }
 
+.nav-toggle {
+	display: none;
+	position: relative;
+	float: right;
+	width: 40px;
+	height: 40px;
+	margin-left: 20px;
+	background: rgba(0, 0, 0, 0.6);
+	cursor: pointer;
+ }
+
+ .nav-toggle span {
+	display: block;
+	position: absolute;
+	top: 19px;
+	left: 8px;
+	right: 8px;
+	height: 2px;
+	background: white;
+ }
+
+ .nav-toggle span:before, .nav-toggle span:after {
+	content: "";
+	position: absolute;
+	display: block;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: white;
+ }
+ .nav-toggle span:before {
+	top: -10px;
+ }
+ .nav-toggle span:after {
+	bottom: -10px;
+ }
+
 .nav_menu {
 	margin: 0;
 	padding: 0;
@@ -187,19 +224,33 @@ ul {
 }
 
 
-@media screen and (max-width: 44em) {
-	body {
-	  margin:1.5em 0;      
+@media (max-width: 768px) {
+	/* показываем кнопку для переключения верхней навигации */
+	.nav-toggle {
+	   display: block;
 	}
-	  
-	  ul {
-		padding:0 .5em;    
-	  }
-	  
-	  ul > li {
-		width:100%;
-		padding:.45em .25em;
-		margin:0 0 .55em 0;
-	  
-	  }
+	header {
+	   padding: 10px 0;
 	}
+	/* скрываем верхнее меню, отменяем обтекание, позиционируем его, сместив на высоту шапки сайта */
+	.nav {
+	   max-height: 0;
+	   background: white;
+	   float: none;
+	   position: absolute;
+	   overflow: hidden;
+	   top: 63px;
+	   right: 0;
+	   left: 0;
+	   margin: 0;
+	   padding: 0;
+	   z-index: 3;
+	}
+	/* делаем элементы списка блочными, чтобы они располагались друг под другом */
+	.nav_menu-item {
+	   display: block;
+	   text-align: center;
+	   border-bottom: 1px solid #EBEBE3;
+	   margin-right: 0;
+	}
+}
