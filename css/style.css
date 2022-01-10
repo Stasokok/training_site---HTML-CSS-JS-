@@ -24,6 +24,7 @@ body {
 	align-items: center;
 	padding-top: 40px;
 	margin-bottom: 80px;
+	max-width: 100%;
 }
 
 .logo-link {
@@ -79,7 +80,7 @@ body {
     color: #FFF;
     font-weight: bold;
     text-transform: uppercase; 
-    font-family: 'Roboto Condensed', Тahoma, sans-serif;
+    font-family: 'Roboto', Тahoma, sans-serif;
     background: #337AB7;
     cursor: pointer; 
     border: 2px solid #BFE2FF;
@@ -184,3 +185,21 @@ ul {
 	display: inline-block;
   	width: 25%;
 }
+
+
+@media screen and (max-width: 44em) {
+	body {
+	  margin:1.5em 0;      
+	}
+	  
+	  ul {
+		padding:0 .5em;    
+	  }
+	  
+	  ul > li {
+		width:100%;
+		padding:.45em .25em;
+		margin:0 0 .55em 0;
+	  
+	  }
+	}

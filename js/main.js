@@ -21,7 +21,7 @@ const Training = () => {
 	const PM = [];
 
 	const TrainingObj = {
-		id: 0,
+		id: '',
 		nameOfWeek: '',
 		nameOfDay: '',
 		nameOfExercise: '',
