@@ -1,13 +1,14 @@
 const Training = () => {
-	const form = document.querySelector('.form');
+	const form = document.querySelector('.formPM');
 	const inputBenchPress = document.getElementById('benchpress');
 	const inputSquat = document.getElementById('squat');
 	const inputArmyBenchPress = document.getElementById('armybenchpress');
 	const inputDeadLift = document.getElementById('deadlift');
 	const submitForm = document.getElementById('submit-form'); 
-	const dayCart = document.querySelector('.programm');
+	const dayCart = document.querySelector('.main-display__programm');
 	const recalc = document.querySelector('.recalculation');
-	const hideBtn = document.querySelector('.hide_btn');
+	const hideBtn = document.querySelector('.main-display__hide-button');
+	const nameOfProgram = document.querySelector('.main-display__programm-subtitle');
 
 	let weekArr = ['Первая неделя', 'Вторая неделя', 'Третья неделя', 'Четвертая неделя'];
 	let dayArr = ['Первый день', 'Второй день', 'Третий день', 'Четвертый день'];
@@ -85,11 +86,11 @@ const Training = () => {
 
 	//создание программы по дням недели
 
-	console.log(PM);
 
 	const renderItems = () => {
+		 nameOfProgram.innerHTML = 'Программа 5-3-1'
 		 form.innerHTML = ''
-		 hideBtn.style.display = 'inline-flex'
+		 hideBtn.style.display = 'flex'
 		 for (i = 1; i < 17; i++) {
 			const item = JSON.parse(localStorage.getItem(`Day${i}`))
 			const day = document.createElement('div');
@@ -148,20 +149,6 @@ const Training = () => {
 		}
 	}
 
-	//вывод данных на страницу
-
-	// const clearStorage = () => {
-	// 	if (localStorage.getItem('Day1')) {
-	// 		localStorage.clear()
-	// 		dayCart.innerHTML = ''
-	// 	} else {
-	// 		createProgramm();
-	// 		renderItems()
-	// 	}
-
-	// }
-
-	// //очистка формы
 	
 	recalc.addEventListener('click', () => {
 		localStorage.clear()

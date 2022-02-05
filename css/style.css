@@ -1,11 +1,12 @@
-html {
+html, 
+body {
+    font-size: 62.5%;
+    font-weight: normal;
 	position: relative;
-	min-height: 100%;
-  }
+}
 
 body {
 	color: rgba(255, 255, 255, 0.8);;
-	font-family: 'Roboto', sans-serif;
 	background: #14131A url(../img/background2.jpg) 100%;
 	background-position: center;
   	background-repeat: no-repeat;
@@ -14,113 +15,110 @@ body {
 	min-height: 100%;
 }
 
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+ul {
+    padding-left: 0;
+}
+
+ul>li {
+    list-style: none;
+}
+
 .container {
-	max-width: 1140px;
-	margin: auto;
+    width: 120rem;
+    margin: 0 auto;
 }
 
 .header {
+    padding-top: 2.3rem;
+    padding-bottom: 2.6rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 63%;
+}
+
+.header__wrap {
+    display: flex;
+    align-items: center;
+	justify-content: space-between;
+}
+
+.header__logo {
+    width: 10rem;
+    height: 6rem;
+}
+
+.header__nav {
 	display: flex;
-	align-items: center;
-	padding-top: 40px;
-	margin-bottom: 80px;
-	max-width: 100%;
 }
 
-.logo-link {
-	display: inline-block;
-	padding-right: 50px;
-}
-
-.nav-toggle {
-	display: none;
-	position: relative;
-	float: right;
-	width: 40px;
-	height: 40px;
-	margin-left: 20px;
-	background: rgba(0, 0, 0, 0.6);
-	cursor: pointer;
- }
-
- .nav-toggle span {
-	display: block;
-	position: absolute;
-	top: 19px;
-	left: 8px;
-	right: 8px;
-	height: 2px;
-	background: white;
- }
-
- .nav-toggle span:before, .nav-toggle span:after {
-	content: "";
-	position: absolute;
-	display: block;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	background: white;
- }
- .nav-toggle span:before {
-	top: -10px;
- }
- .nav-toggle span:after {
-	bottom: -10px;
- }
-
-.nav_menu {
-	margin: 0;
-	padding: 0;
+.nav__menu-link {
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 117%;
+    color: rgba(255, 255, 255, 0.945);
 	list-style: none;
-	display: flex;
-	background-color:rgba(0, 0, 0, 0.6);
-	border-radius: 10px;
-}
-
-.nav_menu-item {
-	margin-right: 30px;
-}
-
-.nav_menu-link {
 	text-decoration: none;
-	color: rgba(255, 255, 255, 0.5);
-
 }
 
-.discription {
+.header__nav li:not(:last-child) {
+    margin-right: 2.5rem;
+}
+
+.main-display__wrap {
+	background-color:rgba(0, 0, 0, 0.6);
+	border-radius: 1rem;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	padding-top: 2rem;
+}
+
+.main-display-title {
+	margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 118%;
 	text-align: center;
-	font-size: 42px;
-	line-height: 300%;
 	color: rgba(255, 255, 255, 0.945);
+	margin-bottom: 4rem;
 }
 
-.hero-discription {
-	max-width: 423px;
-	font-size: 16px;
-	line-height: 140%;
-	color: rgba(255, 255, 255, 0.8);
+.main-display-subtitle,
+.main-display__programm-subtitle {
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 117%;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.945);
+	margin-bottom: 4rem;
 }
 
-.button-group {
-	margin-top: 70px;
+.main-display__button {
+	display: flex;
+	padding-bottom: 4rem;
+	justify-content: center;
+    align-items: center;
 }
 
 .btn {
-    display: inline-flex;
-    margin: 10px;
+    margin: 1rem;
     text-decoration: none;
     position: relative;
-    font-size: 20px;
-    line-height: 20px;
-    padding: 12px 30px;
+    font-size: 2rem;
+    line-height: 2rem;
+    padding: 1.2rem 3rem;
     color: #FFF;
     font-weight: bold;
     text-transform: uppercase; 
     font-family: 'Roboto', Тahoma, sans-serif;
     background: #337AB7;
     cursor: pointer; 
-    border: 2px solid #BFE2FF;
+    border: 0.2rem solid #BFE2FF;
 }
 .btn:hover,
 .btn:active,
@@ -130,16 +128,16 @@ body {
 .btn:after,
 .btn:before {
     position: absolute;
-    height: 4px;
+    height: 0.4rem;
     left: 50%;
     background: #337AB7;
-    bottom: -6px;
+    bottom: -0.6rem;
     content: "";
     transition: all 280ms ease-in-out;
     width: 0;
 }
 .btn:before {
-    top: -6px;
+    top: -0.6rem;
 }
 .btn:hover:after,
 .btn:hover:before,
@@ -151,51 +149,32 @@ body {
     left: 0;
 }
 
-.hide_btn {
+.main-display__hide-button {
 	display: none;
+	padding-bottom: 3rem;
+	justify-content: center;
+    align-items: center;
 }
 
-.content_main {
-	background-color:rgba(0, 0, 0, 0.6);
-	border-radius: 10px;
-	padding-right: 2%;
-	padding-left: 2%;
+.formPM {
+	padding-bottom: 3rem;
 }
 
-.content {
-	display: flex;
-	background-color:rgba(46, 45, 45, 0.8)
+.formPM p{
+	font-weight: 300;
+    font-size: 2rem;
+    line-height: 117%;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.945);
 }
 
-.content-title {
-	font-weight: bold;
-	font-size: 36px;
-	line-height: 42px;
-	color: rgba(255, 255, 255, 0.8);
-	margin-bottom: 21px;
-	margin-top: 0;
-}
-
-.content-text {
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 140%;
-	color: rgba(255, 255, 255, 0.8);
-	max-width: 423px;
-	margin-bottom: 30px;
-}
-
-.list-item {
-	line-height: 1.5;
-}
-
-.content-subtitle {
-	font-weight: bold;
-	font-size: 16px;
-	line-height: 140%;
-	color: rgba(255, 255, 255, 0.8);
-	margin-bottom: 15px;
-	margin-top: 0;
+.main-display__programm {
+	font-weight: 100;
+    font-size: 1.5rem;
+    line-height: 117%;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.945);
+	margin-bottom: 3rem;
 }
 
 .content, .list {
@@ -203,20 +182,6 @@ body {
 	padding: 0;
 }
 
-.form {
-	display: inline-block;
-	padding-right: 5px;
-}
-
-.name_of_programm {
-	display: inline-block;
-	padding: auto;
-	max-width: 100%;
-}
-
-ul {
-	list-style-type: none;
-}
 
 .day {
 	display: inline-block;
@@ -224,33 +189,3 @@ ul {
 }
 
 
-@media (max-width: 768px) {
-	/* показываем кнопку для переключения верхней навигации */
-	.nav-toggle {
-	   display: block;
-	}
-	header {
-	   padding: 10px 0;
-	}
-	/* скрываем верхнее меню, отменяем обтекание, позиционируем его, сместив на высоту шапки сайта */
-	.nav {
-	   max-height: 0;
-	   background: white;
-	   float: none;
-	   position: absolute;
-	   overflow: hidden;
-	   top: 63px;
-	   right: 0;
-	   left: 0;
-	   margin: 0;
-	   padding: 0;
-	   z-index: 3;
-	}
-	/* делаем элементы списка блочными, чтобы они располагались друг под другом */
-	.nav_menu-item {
-	   display: block;
-	   text-align: center;
-	   border-bottom: 1px solid #EBEBE3;
-	   margin-right: 0;
-	}
-}
